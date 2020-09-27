@@ -2,6 +2,7 @@ package com.example.note.security
 
 import java.util.*
 
+//for returning users in the db, will not contain pwd
 data class UserDetailsDTO(
         val id: String,
         var email: String,
@@ -14,5 +15,4 @@ data class UserDetailsDTO(
         var credentialsNonExpired: Boolean,
         var created: Date,
         var modified: Date
-) {
-}
+)

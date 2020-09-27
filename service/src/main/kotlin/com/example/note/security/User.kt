@@ -40,7 +40,8 @@ open class User(
         var lastName: String = "",
         var roles: String = "",
         var enabled: Boolean = true,
-        var accountNonExpired: Boolean = true, var accountNonLocked: Boolean = true,
+        var accountNonExpired: Boolean = true,
+        var accountNonLocked: Boolean = true,
         var credentialsNonExpired: Boolean = true,
         @CreationTimestamp
         var created: Date = Date(),
@@ -69,27 +70,15 @@ open class User(
         return authorities
     }
 
-    override fun isEnabled(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isEnabled() = enabled
 
-    override fun getUsername(): String {
-        TODO("Not yet implemented")
-    }
+    override fun getUsername() = email
 
-    override fun isCredentialsNonExpired(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isCredentialsNonExpired() = credentialsNonExpired
 
-    override fun getPassword(): String {
-        TODO("Not yet implemented")
-    }
+    override fun getPassword() = pwd
 
-    override fun isAccountNonExpired(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isAccountNonExpired() = accountNonExpired
 
-    override fun isAccountNonLocked(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isAccountNonLocked() = accountNonLocked
 }

@@ -29,9 +29,8 @@ class NoteController {
             produces = arrayOf(MediaType.APPLICATION_JSON_VALUE),
             consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE)
     )
-    fun insertNote(
-            @RequestBody note: NoteDTO
-    ) = noteService.insertNote(note)
+    fun insertNote(@RequestBody note: NoteDTO) =
+            noteService.insertNote(note)
 
     @DeleteMapping(
             value = ["/delete/{id}"],

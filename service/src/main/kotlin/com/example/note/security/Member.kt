@@ -1,7 +1,11 @@
 package com.example.note.security
 
 import java.util.*
+import javax.persistence.DiscriminatorValue
+import javax.persistence.Entity
 
+@Entity
+@DiscriminatorValue(value = "MEMBER")
 class Member (
         id: String,
         email: String,
