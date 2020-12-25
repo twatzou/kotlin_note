@@ -1,6 +1,6 @@
-package com.example.note.repository
+package com.example.note.data.db.repository
 
-import com.example.note.data.Note
+import com.example.note.data.db.entity.Note
 import org.springframework.data.repository.CrudRepository
 
 interface NoteRepository : CrudRepository<Note, String>{

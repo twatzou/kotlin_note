@@ -1,4 +1,4 @@
-package com.example.note.repository
+package com.example.note.data.db.repository
 
 import com.example.note.security.User
 import org.springframework.data.repository.CrudRepository

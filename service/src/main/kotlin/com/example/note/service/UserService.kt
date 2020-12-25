@@ -1,14 +1,11 @@
 package com.example.note.service
 
-import com.example.note.repository.UserRepository
+import com.example.note.data.db.repository.UserRepository
 import com.example.note.security.*
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
-import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
-import org.springframework.stereotype.Service
 import java.lang.RuntimeException
 
 @Repository

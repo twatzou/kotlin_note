@@ -1,15 +1,12 @@
 package com.example.note.controller
 
-import com.example.note.data.Note
-import com.example.note.data.Todo
-import com.example.note.data.TodoDTO
+import com.example.note.data.db.entity.Todo
+import com.example.note.data.vo.TodoDTO
 import com.example.note.service.TodoService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.*
-import java.awt.PageAttributes
 import java.util.*
-import javax.xml.ws.Service
 
 data class TodoLaterThanRequest(val date: Date)
 

@@ -54,6 +54,17 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Finchley.M4</version>
+            <type>pom</type>
+            <scope>runtime</scope>
+        </dependency>
+
+
     </dependencies>
 
     <build>

@@ -1,5 +1,6 @@
-package com.example.note.data
+package com.example.note.data.vo
 
+import com.example.note.data.db.entity.Todo
 import java.util.*
 
 data class TodoDTO (

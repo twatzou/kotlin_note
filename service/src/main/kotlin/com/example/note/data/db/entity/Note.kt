@@ -1,4 +1,4 @@
-package com.example.note.data
+package com.example.note.data.db.entity
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import org.hibernate.annotations.CreationTimestamp

@@ -1,10 +1,9 @@
 package com.example.note.service
 
-import com.example.note.data.Todo
-import com.example.note.data.TodoDTO
-import com.example.note.repository.TodoRepository
+import com.example.note.data.db.entity.Todo
+import com.example.note.data.vo.TodoDTO
+import com.example.note.data.db.repository.TodoRepository
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.stereotype.Repository
 import org.springframework.stereotype.Service
 import java.util.*
 
@@ -24,7 +23,8 @@ class TodoService {
 
     fun getScheduleLaterThan(date: Date): Iterable<TodoDTO>{
         return repository.findScheduleLaterThan(date.time).map{
-            it -> TodoDTO(it)
+            it ->
+            TodoDTO(it)
         }
     }
 

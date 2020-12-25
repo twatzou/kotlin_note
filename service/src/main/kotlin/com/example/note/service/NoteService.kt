@@ -1,11 +1,10 @@
 package com.example.note.service
 
-import com.example.note.data.Note
-import com.example.note.data.NoteDTO
-import com.example.note.repository.NoteRepository
+import com.example.note.data.db.entity.Note
+import com.example.note.data.vo.NoteDTO
+import com.example.note.data.db.repository.NoteRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import java.util.*
 
 @Service("Note service")
 class NoteService {
@@ -14,7 +13,8 @@ class NoteService {
     lateinit var repository: NoteRepository
 
     fun getNotes(): Iterable<NoteDTO> = repository.findAll().map {
-        it -> NoteDTO(it)
+        it ->
+        NoteDTO(it)
     }
 
     fun insertNote(note: NoteDTO) = NoteDTO(
@@ -33,7 +33,8 @@ class NoteService {
 
     fun findByTitle(title: String): Iterable<NoteDTO> =
             repository.findByTitle(title).map {
-                it -> NoteDTO(it)
+                it ->
+                NoteDTO(it)
             }
 
 }

@@ -1,4 +1,4 @@
-package com.example.note.data
+package com.example.note.data.db.entity
 
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.GenericGenerator

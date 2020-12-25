@@ -1,6 +1,6 @@
-package com.example.note.repository
+package com.example.note.data.db.repository
 
-import com.example.note.data.Todo
+import com.example.note.data.db.entity.Todo
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 

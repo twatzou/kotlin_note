@@ -1,14 +1,12 @@
 package com.example.note.controller
 
-import com.example.note.data.Note
-import com.example.note.data.NoteDTO
+import com.example.note.data.db.entity.Note
+import com.example.note.data.vo.NoteDTO
 import com.example.note.service.NoteService
-import com.mysql.cj.protocol.a.NativePacketPayload
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.*
-import java.util.*
 
 @RestController
 @RequestMapping("/notes")
@@ -17,6 +15,11 @@ class NoteController {
 
     @Autowired
     private lateinit var noteService: NoteService
+    
+    @GetMapping("/rozou")
+    fun getNote(): String{
+        return "rozou"
+    }
 
     @GetMapping(
             value = ["/obtain"],
